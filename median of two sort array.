@@ -1,0 +1,19 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner hp=new Scanner(System.in);
+	        int n=hp.nextInt();
+	        int arr[]=new int[n];
+	        for(int i=0;i<n;i++) arr[i]=hp.nextInt();
+	        int num[]=new int[n];
+	        for(int i=0;i<n;i++) num[i]=hp.nextInt();
+	        int result[]=new int[arr.length+num.length];
+	        for(int i=0;i<arr.length;i++) result[i]=arr[i];
+	        for(int i=0;i<num.length;i++) result[arr.length+i]=arr[i];
+	        Arrays.sort(result);
+	        double value=result.length%2==1?(result.length+1)/2:(result.length/2)+(result.length+1)/2;
+	        System.out.println(value);
+	}
+}
